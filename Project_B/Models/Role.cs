@@ -5,15 +5,15 @@ namespace Project_B.Models
     public class Role
     {
         [Key]
-        public int Id { get; set; }
+        public int RoleId { get; set; }
 
         public int Status { get; set; }
 
         public DateTime CreatedDate { get; set; }
 
         [MaxLength(50)]
-        public string RoleName { get; set; }
+        public required string RoleName { get; set; }
 
-        public List<RoleUser> RoleUsers { get; set; }
+        public ICollection<RoleUser>? RoleUsers { get; set; }
     }
 }

@@ -22,7 +22,7 @@ namespace Project_B.Controllers
             var roles = await _roleService.GetAllRolesAsync();
             var roleDTOs = roles.Select(r => new RoleDTO
             {
-                Id = r.Id,
+                RoleId = r.RoleId,
                 RoleName = r.RoleName,
                 Status = r.Status
             });
@@ -38,7 +38,7 @@ namespace Project_B.Controllers
 
             var roleDTO = new RoleDTO
             {
-                Id = role.Id,
+                RoleId = role.RoleId,
                 RoleName = role.RoleName,
                 Status = role.Status
             };
@@ -57,7 +57,7 @@ namespace Project_B.Controllers
             };
 
             await _roleService.AddRoleAsync(role);
-            return CreatedAtAction(nameof(GetRoleById), new { id = role.Id }, roleDTO);
+            return CreatedAtAction(nameof(GetRoleById), new { id = role.RoleId }, roleDTO);
         }
 
         [HttpPut("{id}")]

@@ -6,7 +6,7 @@
 
         public string? Name { get; set; }
 
-        public string Email { get; set; }
+        public required string Email { get; set; }
 
         public string? Password { get; set; }
 
@@ -23,10 +23,10 @@
 
         public string? Description { get; set; }
 
-        public ICollection<RoleUser> RoleUsers { get; set; }
-        public ICollection<Budget> Budgets { get; set; }
-        public ICollection<Goal> Goals { get; set; }
-        public ICollection<Meal> Meals { get; set; }
-        public ICollection<Location> Locations { get; set; }
+        public ICollection<RoleUser>? RoleUsers { get; set; }
+        public ICollection<Budget>? Budgets { get; set; }
+        public ICollection<Goal>? Goals { get; set; }
+        public ICollection<Meal>? Meals { get; set; }
+        public ICollection<Location>? Locations { get; set; }
     }
 }

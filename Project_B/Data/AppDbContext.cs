@@ -43,16 +43,20 @@ namespace Project_B.Data
                 .HasForeignKey(l => l.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Cấu hình mối quan hệ giữa Role và RoleUser (nhiều-nhiều)
             modelBuilder.Entity<RoleUser>()
                 .HasKey(ru => new { ru.RoleId, ru.UserId });
 
-            // Cấu hình mối quan hệ giữa RoleUser và Role
             modelBuilder.Entity<RoleUser>()
-               .HasOne(ru => ru.Role)
-               .WithMany()
-               .HasForeignKey(ru => ru.RoleId)
-               .OnDelete(DeleteBehavior.Cascade);
+                .HasOne(ru => ru.Role)
+                .WithMany(r => r.RoleUsers)
+                .HasForeignKey(ru => ru.RoleId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<RoleUser>()
+                .HasOne(ru => ru.User)
+                .WithMany(u => u.RoleUsers)
+                .HasForeignKey(ru => ru.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             // Cấu hình mối quan hệ giữa RoleUser và User
             modelBuilder.Entity<RoleUser>()
