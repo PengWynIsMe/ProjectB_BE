@@ -59,7 +59,20 @@ namespace Project_B.Interface.Implement
             };
 
             _context.Users.Add(user);
-            return await _context.SaveChangesAsync() > 0;
+            var result = await _context.SaveChangesAsync() > 0;
+
+            if (result)
+            {
+                var roleUser = new RoleUser
+                {
+                    UserId = user.UserId,
+                    RoleId = 2 // 2 = normal user
+                };
+                _context.Set<RoleUser>().Add(roleUser);
+                await _context.SaveChangesAsync();
+            }
+
+            return result;
         }
 
         public async Task<bool> UpdateUserAsync(UserDTO userDto)
@@ -118,6 +131,14 @@ namespace Project_B.Interface.Implement
             if (user == null) return false;
 
             user.IsActive = true;
+            // After user is activated
+            var roleUser = new RoleUser
+            {
+                UserId = user.UserId,
+                RoleId = 2 // 2 = normal user
+            };
+            _context.Set<RoleUser>().Add(roleUser);
+            await _context.SaveChangesAsync();
             user.Status = 1;
             user.OTPCode = null;
 
@@ -182,6 +203,13 @@ namespace Project_B.Interface.Implement
                 };
                 _context.Users.Add(user);
                 await _context.SaveChangesAsync();
+                var roleUser = new RoleUser
+                {
+                    UserId = user.UserId,
+                    RoleId = 2 // 2 = normal user
+                };
+                _context.Set<RoleUser>().Add(roleUser);
+                await _context.SaveChangesAsync();
             }
 
             // 3. Generate JWT
@@ -196,12 +224,19 @@ namespace Project_B.Interface.Implement
             var jwtIssuer = _configuration["Jwt:Issuer"];
             var jwtAudience = _configuration["Jwt:Audience"];
 
-            var claims = new[]
-            {
-        new Claim(JwtRegisteredClaimNames.Sub, user.Email),
-        new Claim("UserId", user.UserId.ToString()),
-        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-    };
+            // Lấy role từ DB
+            var role = _context.RoleUsers
+                .Where(r => r.UserId == user.UserId)
+                .Select(r => r.Role.RoleName)
+                .FirstOrDefault() ?? "User";
+
+            var claims = new List<Claim>
+                {
+                new Claim(JwtRegisteredClaimNames.Sub, user.Email),
+                new Claim("UserId", user.UserId.ToString()),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim(ClaimTypes.Role, role)
+                };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

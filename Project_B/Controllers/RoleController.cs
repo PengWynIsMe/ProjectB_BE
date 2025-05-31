@@ -82,5 +82,48 @@ namespace Project_B.Controllers
             await _roleService.DeleteRoleAsync(id);
             return NoContent();
         }
+
+        //List Manager
+        [HttpGet("{roleId}/Users")]
+        public async Task<IActionResult> GetUsersByRole(int roleId)
+        {
+            var users = await _roleService.GetUsersByRoleAsync(roleId);
+            return Ok(users.Select(u => new {
+                u.UserId,
+                u.Name,
+                u.Email
+            }));
+        }
+
+        [HttpPost("{roleId}/AssignUser")]
+        public async Task<IActionResult> AssignUserToRole(int roleId, int userId)
+        {
+            var result = await _roleService.AssignUserToRoleAsync(roleId, userId);
+            if (!result) return BadRequest("User already has this role.");
+            return Ok("User assigned successfully.");
+        }
+
+        [HttpDelete("{roleId}/RemoveUser/{userId}")]
+        public async Task<IActionResult> RemoveUserFromRole(int roleId, int userId)
+        {
+            var result = await _roleService.RemoveUserFromRoleAsync(roleId, userId);
+            if (!result) return NotFound("User-role relation not found.");
+            return Ok("User removed from role.");
+        }
+
+        [HttpGet("{roleId}/UnassignedUsers")]
+        public async Task<IActionResult> GetUnassignedUsers(int roleId)
+        {
+            var users = await _roleService.GetUnassignedUsersAsync(roleId);
+
+            return Ok(users.Select(u => new
+            {
+                u.UserId,
+                u.Name,
+                u.Email,
+                u.Avatar
+            }));
+        }
+
     }
 }

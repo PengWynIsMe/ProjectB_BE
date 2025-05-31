@@ -623,6 +623,80 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Project_B.Controllers.RoleController",
+    "Method": "AssignUserToRole",
+    "RelativePath": "api/Role/{roleId}/AssignUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Project_B.Controllers.RoleController",
+    "Method": "RemoveUserFromRole",
+    "RelativePath": "api/Role/{roleId}/RemoveUser/{userId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Project_B.Controllers.RoleController",
+    "Method": "GetUnassignedUsers",
+    "RelativePath": "api/Role/{roleId}/UnassignedUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Project_B.Controllers.RoleController",
+    "Method": "GetUsersByRole",
+    "RelativePath": "api/Role/{roleId}/Users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Project_B.Controllers.UsersController",
     "Method": "GetUsers",
     "RelativePath": "api/Users",

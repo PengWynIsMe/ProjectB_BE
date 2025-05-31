@@ -58,14 +58,6 @@ namespace Project_B.Data
                 .HasForeignKey(ru => ru.UserId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            // Cấu hình mối quan hệ giữa RoleUser và User
-            modelBuilder.Entity<RoleUser>()
-                .HasOne(ru => ru.User)
-                .WithMany()
-                .HasForeignKey(ru => ru.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
-
-
             // Mối quan hệ giữa Budget và User
             modelBuilder.Entity<User>()
                 .HasMany(u => u.Budgets)

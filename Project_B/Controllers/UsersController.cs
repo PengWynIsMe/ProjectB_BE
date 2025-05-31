@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Project_B.DTOs;
 using Project_B.Interface;
 using Project_B.Models;
@@ -18,6 +19,7 @@ namespace Project_B.Controllers
 
         // GET: api/Users
         [HttpGet]
+        //[Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetUsers()
         {
             var users = await _userRepository.GetUsersAsync();
@@ -48,6 +50,7 @@ namespace Project_B.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin,User")]
         public async Task<IActionResult> UpdateUser(int id, [FromBody] UserDTO userDto)
         {
             if (id != userDto.UserId) return BadRequest();
@@ -138,3 +141,4 @@ namespace Project_B.Controllers
 
     }
 }
+

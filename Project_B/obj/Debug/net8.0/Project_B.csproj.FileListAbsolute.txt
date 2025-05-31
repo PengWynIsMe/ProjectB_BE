@@ -530,12 +530,6 @@ C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\scopedcss\bundle\Project_B.s
 C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\staticwebassets.build.json
 C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\staticwebassets.development.json
 C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\staticwebassets\msbuild.Project_B.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\staticwebassets\msbuild.Project_B.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\staticwebassets\msbuild.build.Project_B.props
-C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Project_B.props
-C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Project_B.props
-C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\Project_B.csproj.Up2Date
 C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\Project_B.dll
@@ -543,3 +537,4 @@ C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\refint\Project_B.dll
 C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\Project_B.pdb
 C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\Project_B.genruntimeconfig.cache
 C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\ref\Project_B.dll
+C:\Project_B\ProjectB_BE\Project_B\obj\Debug\net8.0\staticwebassets.build.json.cache

@@ -29,6 +29,7 @@ builder.Services.AddScoped<IEventRepository, EventImpl>();
 builder.Services.AddScoped<IMealRepository, MealImpl>();
 builder.Services.AddScoped<ILocationRepository, LocationImpl>();
 builder.Services.AddScoped<IGoalRepository, GoalImpl>();
+builder.Services.AddScoped<IRoleRepository, RoleImpl>();
 
 
 

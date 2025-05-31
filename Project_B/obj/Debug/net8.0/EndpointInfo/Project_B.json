@@ -1027,6 +1027,115 @@
         }
       }
     },
+    "/api/Role/{roleId}/Users": {
+      "get": {
+        "tags": [
+          "Role"
+        ],
+        "parameters": [
+          {
+            "name": "roleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Role/{roleId}/AssignUser": {
+      "post": {
+        "tags": [
+          "Role"
+        ],
+        "parameters": [
+          {
+            "name": "roleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Role/{roleId}/RemoveUser/{userId}": {
+      "delete": {
+        "tags": [
+          "Role"
+        ],
+        "parameters": [
+          {
+            "name": "roleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Role/{roleId}/UnassignedUsers": {
+      "get": {
+        "tags": [
+          "Role"
+        ],
+        "parameters": [
+          {
+            "name": "roleId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Users": {
       "get": {
         "tags": [
@@ -1544,6 +1653,9 @@
         "additionalProperties": false
       },
       "EmailDTO": {
+        "required": [
+          "email"
+        ],
         "type": "object",
         "properties": {
           "email": {
@@ -1720,6 +1832,9 @@
         "additionalProperties": false
       },
       "Location": {
+        "required": [
+          "locationName"
+        ],
         "type": "object",
         "properties": {
           "locationID": {
@@ -1736,9 +1851,15 @@
             "type": "string",
             "nullable": true
           },
+          "closeTime": {
+            "type": "string",
+            "format": "date-span",
+            "nullable": true
+          },
           "openTime": {
             "type": "string",
-            "format": "date-span"
+            "format": "date-span",
+            "nullable": true
           },
           "phone": {
             "maxLength": 15,
@@ -1765,6 +1886,9 @@
         "additionalProperties": false
       },
       "Meal": {
+        "required": [
+          "mealName"
+        ],
         "type": "object",
         "properties": {
           "mealID": {
@@ -1779,6 +1903,11 @@
           "address": {
             "maxLength": 100,
             "type": "string",
+            "nullable": true
+          },
+          "closeTime": {
+            "type": "string",
+            "format": "date-span",
             "nullable": true
           },
           "openTime": {
@@ -1866,9 +1995,12 @@
         "additionalProperties": false
       },
       "Role": {
+        "required": [
+          "roleName"
+        ],
         "type": "object",
         "properties": {
-          "id": {
+          "roleId": {
             "type": "integer",
             "format": "int32"
           },
@@ -1898,7 +2030,7 @@
       "RoleDTO": {
         "type": "object",
         "properties": {
-          "id": {
+          "roleId": {
             "type": "integer",
             "format": "int32"
           },
@@ -1985,6 +2117,9 @@
         "additionalProperties": false
       },
       "User": {
+        "required": [
+          "email"
+        ],
         "type": "object",
         "properties": {
           "userId": {
