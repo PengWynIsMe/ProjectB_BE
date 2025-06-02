@@ -106,8 +106,7 @@
               "RelativeToolTip": "DTOs\\UserDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T15:07:49.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-31T15:07:49.296Z"
             },
             {
               "$type": "Document",
@@ -117,7 +116,7 @@
               "RelativeDocumentMoniker": "Interface\\Implement\\UserImpl.cs",
               "ToolTip": "C:\\Project_B\\ProjectB_BE\\Project_B\\Interface\\Implement\\UserImpl.cs",
               "RelativeToolTip": "Interface\\Implement\\UserImpl.cs",
-              "ViewState": "AgIAAC4BAAAAAAAAAAAAwDIBAAArAAAAAAAAAA==",
+              "ViewState": "AgIAACkBAAAAAAAAAAAAADIBAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-31T15:06:22.26Z",
               "EditorCaption": ""
@@ -132,8 +131,7 @@
               "RelativeToolTip": "Models\\Role.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwA4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T13:32:22.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T13:32:22.83Z"
             },
             {
               "$type": "Document",
@@ -145,8 +143,7 @@
               "RelativeToolTip": "Interface\\Implement\\RoleImpl.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAcwGQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T09:29:49.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-31T09:29:49.663Z"
             },
             {
               "$type": "Document",
@@ -158,8 +155,7 @@
               "RelativeToolTip": "Data\\AppDbContext.cs",
               "ViewState": "AgIAADQAAAAAAAAAAAAAwEQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T06:20:01.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T06:20:01.416Z"
             },
             {
               "$type": "Document",
@@ -171,8 +167,7 @@
               "RelativeToolTip": "Models\\Meal.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAUwB0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T13:32:23.111Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T13:32:23.111Z"
             },
             {
               "$type": "Document",
@@ -184,8 +179,7 @@
               "RelativeToolTip": "Controllers\\RoleController.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAADwv4AAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T13:28:37.971Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T13:28:37.971Z"
             },
             {
               "$type": "Document",
@@ -197,8 +191,7 @@
               "RelativeToolTip": "Controllers\\UsersController.cs",
               "ViewState": "AgIAAFEAAAAAAAAAAAAwwI8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T06:06:53.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T06:06:53.654Z"
             },
             {
               "$type": "Document",
@@ -210,8 +203,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAMwDMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T06:19:00.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T06:19:00.153Z"
             },
             {
               "$type": "Document",
@@ -223,8 +215,7 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAwwAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T13:34:05.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T13:34:05.782Z"
             },
             {
               "$type": "Document",
@@ -236,8 +227,7 @@
               "RelativeToolTip": "Models\\RoleUser.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T13:33:26.934Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T13:33:26.934Z"
             },
             {
               "$type": "Document",
@@ -249,8 +239,7 @@
               "RelativeToolTip": "Interface\\IRoleRepository.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAA3wBMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T14:54:39.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-31T14:54:39.305Z"
             },
             {
               "$type": "Document",
@@ -262,8 +251,7 @@
               "RelativeToolTip": "DTOs\\RoleDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T13:31:21.143Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T13:31:21.143Z"
             },
             {
               "$type": "Document",
@@ -275,8 +263,7 @@
               "RelativeToolTip": "Controllers\\MealController.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T06:51:28.841Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T06:51:28.841Z"
             },
             {
               "$type": "Document",
