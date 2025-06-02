@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Interface",
+    "\\Interface\\Implement"
   ],
-  "SelectedNode": "\\Project_B.sln",
+  "SelectedNode": "\\Interface\\Implement\\UserImpl.cs",
   "PreviewInSolutionExplorer": false
 }

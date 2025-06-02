@@ -44,7 +44,8 @@ namespace Project_B.Data
                 .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<RoleUser>()
-                .HasKey(ru => new { ru.RoleId, ru.UserId });
+            .HasKey(ru => ru.Id); 
+
 
             modelBuilder.Entity<RoleUser>()
                 .HasOne(ru => ru.Role)

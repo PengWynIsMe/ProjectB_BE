@@ -304,7 +304,7 @@ namespace Project_B.Interface.Implement
         {
             var fromAddress = new MailAddress("dtaminh0310@gmail.com", "Livio");
             var toAddress = new MailAddress(email);
-            const string fromPassword = "";
+            const string fromPassword = "acoz obwc moej dfjr";
             const string subject = "Email Verification";
             string body = $"Your activation code is: {otpCode}";
 
