@@ -1,16 +1,17 @@
 ﻿using Google.Apis.Auth;
+using Microsoft.CodeAnalysis.Scripting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Project_B.Data;
 using Project_B.DTOs;
 using Project_B.Models;
 using System.IdentityModel.Tokens.Jwt;
-using System.Net.Mail;
 using System.Net;
+using System.Net.Mail;
 using System.Security.Claims;
 using System.Security.Cryptography;
-using System.Text.RegularExpressions;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Project_B.Interface.Implement
 {
@@ -28,7 +29,11 @@ namespace Project_B.Interface.Implement
 
         public async Task<IEnumerable<UserDTO>> GetUsersAsync()
         {
-            return await _context.Users.Select(u => new UserDTO(u)).ToListAsync();
+            return await _context.Users
+                .Include(u => u.RoleUsers)
+                    .ThenInclude(ru => ru.Role)
+                .Select(u => new UserDTO(u))
+                .ToListAsync();
         }
 
         public async Task<UserDTO> GetUserAsync(int userId)
@@ -131,6 +136,7 @@ namespace Project_B.Interface.Implement
             if (user == null) return false;
 
             user.IsActive = true;
+
             // After user is activated
             var roleUser = new RoleUser
             {
@@ -138,6 +144,7 @@ namespace Project_B.Interface.Implement
                 RoleId = 2 // 2 = normal user
             };
             _context.Set<RoleUser>().Add(roleUser);
+            _context.RoleUsers.Add(roleUser);
             await _context.SaveChangesAsync();
             user.Status = 1;
             user.OTPCode = null;
@@ -164,7 +171,7 @@ namespace Project_B.Interface.Implement
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == setPasswordDTO.Email);
             if (user == null) return false;
 
-            user.Password = HashPassword(setPasswordDTO.Password);
+            user.Password = BCrypt.Net.BCrypt.HashPassword(setPasswordDTO.Password);
             _context.Entry(user).State = EntityState.Modified;
             return await _context.SaveChangesAsync() > 0;
         }
@@ -172,7 +179,7 @@ namespace Project_B.Interface.Implement
         public async Task<UserDTO> LoginAsync(AccountDTO loginDTO)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == loginDTO.Email);
-            if (user == null || user.Password != HashPassword(loginDTO.Password))
+            if (user == null || !BCrypt.Net.BCrypt.Verify(loginDTO.Password, user.Password))
                 return null;
 
             if (!user.IsActive)
@@ -282,14 +289,6 @@ namespace Project_B.Interface.Implement
             {
                 return false;
             }
-        }
-
-        private string HashPassword(string password)
-        {
-            using var sha256 = SHA256.Create();
-            var bytes = Encoding.UTF8.GetBytes(password);
-            var hash = sha256.ComputeHash(bytes);
-            return Convert.ToBase64String(hash);
         }
 
         private string GenerateOtpCode()

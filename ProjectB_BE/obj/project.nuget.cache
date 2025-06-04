@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "N32EqVFfuWU=",
+  "dgSpecHash": "aFzTtoptV+A=",
   "success": true,
   "projectFilePath": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Project_B.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\google.apis\\1.69.0\\google.apis.1.69.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\google.apis.auth\\1.69.0\\google.apis.auth.1.69.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\google.apis.auth.aspnetcore3\\1.69.0\\google.apis.auth.aspnetcore3.1.69.0.nupkg.sha512",

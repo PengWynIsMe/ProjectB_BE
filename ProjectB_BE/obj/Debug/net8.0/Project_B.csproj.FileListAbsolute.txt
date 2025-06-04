@@ -806,3 +806,4 @@ C:\Project_B\ProjectB_BE\ProjectB_BE\obj\Debug\net8.0\refint\Project_B.dll
 C:\Project_B\ProjectB_BE\ProjectB_BE\obj\Debug\net8.0\Project_B.pdb
 C:\Project_B\ProjectB_BE\ProjectB_BE\obj\Debug\net8.0\Project_B.genruntimeconfig.cache
 C:\Project_B\ProjectB_BE\ProjectB_BE\obj\Debug\net8.0\ref\Project_B.dll
+C:\Project_B\ProjectB_BE\ProjectB_BE\bin\Debug\net8.0\BCrypt.Net-Next.dll
