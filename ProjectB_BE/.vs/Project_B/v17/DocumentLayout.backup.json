@@ -7,24 +7,28 @@
       "RelativeMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\interface\\implement\\userimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|solutionrelative:interface\\implement\\userimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|solutionrelative:interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\interface\\implement\\userimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|solutionrelative:interface\\implement\\userimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\dtos\\userselfupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|solutionrelative:dtos\\userselfupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|solutionrelative:controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|solutionrelative:dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|solutionrelative:controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -41,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\interface\\implement\\roleimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|solutionrelative:interface\\implement\\roleimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -150,9 +150,9 @@
               "Title": "UserSelfUpdateDTO.cs",
               "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\DTOs\\UserSelfUpdateDTO.cs",
               "RelativeDocumentMoniker": "DTOs\\UserSelfUpdateDTO.cs",
-              "ToolTip": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\DTOs\\UserSelfUpdateDTO.cs*",
-              "RelativeToolTip": "DTOs\\UserSelfUpdateDTO.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "ToolTip": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\DTOs\\UserSelfUpdateDTO.cs",
+              "RelativeToolTip": "DTOs\\UserSelfUpdateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-05T05:50:58.721Z",
               "EditorCaption": ""
@@ -163,34 +163,73 @@
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Controllers\\UsersController.cs*",
-              "RelativeToolTip": "Controllers\\UsersController.cs*",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAqwEcAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T06:06:53.654Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\DTOs\\UserDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\UserDTO.cs",
+              "ToolTip": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\DTOs\\UserDTO.cs",
+              "RelativeToolTip": "DTOs\\UserDTO.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA3wCkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-31T15:07:49.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Interface\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Interface\\IUserRepository.cs",
+              "ToolTip": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Interface\\IUserRepository.cs",
+              "RelativeToolTip": "Interface\\IUserRepository.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T12:46:03.764Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA5wB0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T13:34:05.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "UserImpl.cs",
               "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Interface\\Implement\\UserImpl.cs",
               "RelativeDocumentMoniker": "Interface\\Implement\\UserImpl.cs",
-              "ToolTip": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Interface\\Implement\\UserImpl.cs*",
-              "RelativeToolTip": "Interface\\Implement\\UserImpl.cs*",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAQwGAAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Interface\\Implement\\UserImpl.cs",
+              "RelativeToolTip": "Interface\\Implement\\UserImpl.cs",
+              "ViewState": "AgIAAN0AAAAAAAAAAAAUwGAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-31T15:06:22.26Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Program.cs*",
-              "RelativeToolTip": "Program.cs*",
+              "ToolTip": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Program.cs",
+              "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAcwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-27T06:19:00.153Z",
@@ -198,33 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserDTO.cs",
-              "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\DTOs\\UserDTO.cs",
-              "RelativeDocumentMoniker": "DTOs\\UserDTO.cs",
-              "ToolTip": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\DTOs\\UserDTO.cs",
-              "RelativeToolTip": "DTOs\\UserDTO.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAA0wDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T15:07:49.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Interface\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Interface\\IUserRepository.cs",
-              "ToolTip": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Interface\\IUserRepository.cs*",
-              "RelativeToolTip": "Interface\\IUserRepository.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABNAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T12:46:03.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "RoleController.cs",
               "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Controllers\\RoleController.cs",
               "RelativeDocumentMoniker": "Controllers\\RoleController.cs",
@@ -237,7 +250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -250,7 +263,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
@@ -288,7 +301,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "RoleImpl.cs",
               "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Interface\\Implement\\RoleImpl.cs",
               "RelativeDocumentMoniker": "Interface\\Implement\\RoleImpl.cs",
@@ -310,19 +323,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-30T13:31:21.143Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA9wCEAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T13:34:05.782Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",

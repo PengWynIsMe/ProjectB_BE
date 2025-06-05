@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\interface\\implement\\userimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|solutionrelative:interface\\implement\\userimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|solutionrelative:interface\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\interface\\implement\\userimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|solutionrelative:interface\\implement\\userimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{19F0901E-79B9-4881-AFEF-3611651AC4AF}|Project_B.csproj|c:\\project_b\\projectb_be\\projectb_be\\dtos\\userselfupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -118,7 +118,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 324,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -154,12 +154,11 @@
               "RelativeToolTip": "DTOs\\UserSelfUpdateDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T05:50:58.721Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T05:50:58.721Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
@@ -180,12 +179,11 @@
               "RelativeToolTip": "DTOs\\UserDTO.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAA3wCkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T15:07:49.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-31T15:07:49.296Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "IUserRepository.cs",
               "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Interface\\IUserRepository.cs",
               "RelativeDocumentMoniker": "Interface\\IUserRepository.cs",
@@ -193,8 +191,7 @@
               "RelativeToolTip": "Interface\\IUserRepository.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwA0AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-02T12:46:03.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-02T12:46:03.764Z"
             },
             {
               "$type": "Document",
@@ -206,18 +203,17 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAA5wB0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T13:34:05.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T13:34:05.782Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "UserImpl.cs",
               "DocumentMoniker": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Interface\\Implement\\UserImpl.cs",
               "RelativeDocumentMoniker": "Interface\\Implement\\UserImpl.cs",
               "ToolTip": "C:\\Project_B\\ProjectB_BE\\ProjectB_BE\\Interface\\Implement\\UserImpl.cs",
               "RelativeToolTip": "Interface\\Implement\\UserImpl.cs",
-              "ViewState": "AgIAAN0AAAAAAAAAAAAUwGAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC4BAAAAAAAAAAAmwEUBAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-31T15:06:22.26Z",
               "EditorCaption": ""
@@ -232,8 +228,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAcwCQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T06:19:00.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T06:19:00.153Z"
             },
             {
               "$type": "Document",
@@ -245,8 +240,7 @@
               "RelativeToolTip": "Controllers\\RoleController.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAADwv4AAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-30T13:28:37.971Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-30T13:28:37.971Z"
             },
             {
               "$type": "Document",
@@ -258,8 +252,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-27T06:22:58.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T06:22:58.791Z"
             },
             {
               "$type": "Document",
@@ -271,8 +264,7 @@
               "RelativeToolTip": "Data\\AppDbContext.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAiwC0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-27T06:20:01.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-27T06:20:01.416Z"
             },
             {
               "$type": "Document",
@@ -296,8 +288,7 @@
               "RelativeToolTip": "Models\\Transaction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-05T03:22:33.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-05T03:22:33.37Z"
             },
             {
               "$type": "Document",
@@ -309,8 +300,7 @@
               "RelativeToolTip": "Interface\\Implement\\RoleImpl.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAcwGQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T09:29:49.663Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-31T09:29:49.663Z"
             },
             {
               "$type": "Document",
