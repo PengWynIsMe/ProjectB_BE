@@ -750,7 +750,7 @@
   },
   {
     "ContainingType": "Project_B.Controllers.UsersController",
-    "Method": "UpdateUser",
+    "Method": "UpdateUserByAdmin",
     "RelativePath": "api/Users/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
@@ -860,6 +860,22 @@
       {
         "Name": "resetPasswordDTO",
         "Type": "Project_B.DTOs.EmailDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Project_B.Controllers.UsersController",
+    "Method": "UpdateUserProfile",
+    "RelativePath": "api/Users/self",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userDto",
+        "Type": "Project_B.DTOs.UserSelfUpdateDTO",
         "IsRequired": true
       }
     ],

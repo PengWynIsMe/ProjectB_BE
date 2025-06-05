@@ -1,10 +1,11 @@
-﻿using Project_B.Data;
-using Project_B.Interface;
-using Project_B.Interface.Implement;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.IdentityModel.Tokens;
+using Project_B.Data;
+using Project_B.Interface;
+using Project_B.Interface.Implement;
+using System.Security.Claims;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -34,7 +35,7 @@ builder.Services.AddScoped<IRoleRepository, RoleImpl>();
 
 
 
-var jwtKey = builder.Configuration["Jwt:Key"];
+var jwtKey = builder.Configuration["Jwt:SecretKey"];
 var jwtIssuer = builder.Configuration["Jwt:Issuer"];
 
 builder.Services.AddAuthentication(options =>
@@ -53,7 +54,8 @@ builder.Services.AddAuthentication(options =>
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidAudience = builder.Configuration["Jwt:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"]))
+                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"])),
+            RoleClaimType = ClaimTypes.Role
         };
     })
     .AddGoogleOpenIdConnect(options =>

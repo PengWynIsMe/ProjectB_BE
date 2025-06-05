@@ -80,20 +80,41 @@ namespace Project_B.Interface.Implement
             return result;
         }
 
-        public async Task<bool> UpdateUserAsync(UserDTO userDto)
+        public async Task<bool> UpdateUserProfileAsync(int userId, UserSelfUpdateDTO dto)
+        {
+            var user = await _context.Users.FindAsync(userId);
+            if (user == null) return false;
+
+            user.Name = dto.Name;
+            user.Address = dto.Address;
+            user.Phone = dto.Phone;
+            user.DOB = dto.DOB;
+            user.Gender = dto.Gender;
+
+            _context.Entry(user).State = EntityState.Modified;
+            return await _context.SaveChangesAsync() > 0;
+        }
+
+
+        public async Task<bool> UpdateUserByAdminAsync(UserDTO userDto)
         {
             var user = await _context.Users.FindAsync(userDto.UserId);
             if (user == null) return false;
 
             user.Name = userDto.Name;
             user.Email = userDto.Email;
-            user.Password = userDto.Password;
+            user.Address = userDto.Address;
+            user.Phone = userDto.Phone;
+            user.DOB = userDto.DOB;
+            user.Gender = userDto.Gender;
+            user.Status = userDto.Status;
             user.IsActive = userDto.IsActive;
             user.IsDeleted = userDto.IsDeleted;
 
             _context.Entry(user).State = EntityState.Modified;
             return await _context.SaveChangesAsync() > 0;
         }
+
 
         public async Task<bool> DeleteUserAsync(int userId)
         {
@@ -293,11 +314,10 @@ namespace Project_B.Interface.Implement
 
         private string GenerateOtpCode()
         {
-            using var rng = RandomNumberGenerator.Create();
-            var bytes = new byte[6];
-            rng.GetBytes(bytes);
-            return BitConverter.ToString(bytes).Replace("-", "").Substring(0, 6);
+            int number = RandomNumberGenerator.GetInt32(0, 1_000_000);
+            return number.ToString("D6");
         }
+
 
         private async Task SendActivationEmail(string email, string otpCode)
         {

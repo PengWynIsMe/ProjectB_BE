@@ -49,17 +49,32 @@ namespace Project_B.Controllers
             return Ok("User created successfully.");
         }
 
-        [HttpPut("{id}")]
-        [Authorize(Roles = "Admin,User")]
-        public async Task<IActionResult> UpdateUser(int id, [FromBody] UserDTO userDto)
+        [HttpPut("self")]
+        [Authorize(Roles = "User")]
+        public async Task<IActionResult> UpdateUserProfile([FromBody] UserSelfUpdateDTO userDto)
         {
-            if (id != userDto.UserId) return BadRequest();
+            var userIdStr = User.FindFirst("UserId")?.Value;
+            if (!int.TryParse(userIdStr, out var userId)) return Unauthorized();
 
-            var result = await _userRepository.UpdateUserAsync(userDto);
+            var result = await _userRepository.UpdateUserProfileAsync(userId, userDto);
             if (!result) return NotFound();
 
             return NoContent();
         }
+
+
+        [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> UpdateUserByAdmin(int id, [FromBody] UserDTO userDto)
+        {
+            if (id != userDto.UserId) return BadRequest();
+
+            var result = await _userRepository.UpdateUserByAdminAsync(userDto); /
+            if (!result) return NotFound();
+
+            return NoContent();
+        }
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteUser(int id)
