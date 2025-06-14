@@ -8,7 +8,7 @@ namespace Project_B.Interface
         Task<UserDTO> GetUserAsync(int userId);
         Task<bool> CreateUserAsync(UserDTO user);
         Task<bool> UpdateUserProfileAsync(int userId, UserSelfUpdateDTO dto);        // user
-        Task<bool> UpdateUserByAdminAsync(UserDTO userDto);      // admin
+        Task<bool> UpdateUserByAdminAsync(UserStatusUpdateDTO userStatusUpdateDTO);      // admin
         Task<bool> DeleteUserAsync(int userId);
         Task<bool> RegisterUserAsync(EmailDTO registerDTO);
         Task<bool> VerifyEmailAsync(OTPCodeVerifyDTO verifyEmailDTO);

@@ -51,7 +51,7 @@ namespace Project_B.Data
                 .HasOne(ru => ru.Role)
                 .WithMany(r => r.RoleUsers)
                 .HasForeignKey(ru => ru.RoleId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<RoleUser>()
                 .HasOne(ru => ru.User)

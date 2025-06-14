@@ -762,8 +762,8 @@
         "IsRequired": true
       },
       {
-        "Name": "userDto",
-        "Type": "Project_B.DTOs.UserDTO",
+        "Name": "userStatusUpdateDTO",
+        "Type": "Project_B.DTOs.UserStatusUpdateDTO",
         "IsRequired": true
       }
     ],
@@ -794,8 +794,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "idToken",
-        "Type": "System.String",
+        "Name": "dto",
+        "Type": "Project_B.DTOs.GoogleLoginDTO",
         "IsRequired": true
       }
     ],

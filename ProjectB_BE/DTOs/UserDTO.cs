@@ -23,6 +23,7 @@ namespace Project_B.DTOs
         public bool IsDeleted { get; set; }
         public string Password { get; set; }
         public string Token { get; internal set; }
+        public bool HasPassword { get; set; }
         public string Description { get; set; }
         public ICollection<String> Roles { get; set; }
 
@@ -34,6 +35,7 @@ namespace Project_B.DTOs
             UserId = user.UserId;
             Name = user.Name;
             Email = user.Email;
+            HasPassword = !string.IsNullOrEmpty(user.Password);
             IsActive = user.IsActive;
             DOB = user.DOB;
             Phone = user.Phone;

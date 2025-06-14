@@ -96,20 +96,12 @@ namespace Project_B.Interface.Implement
         }
 
 
-        public async Task<bool> UpdateUserByAdminAsync(UserDTO userDto)
+        public async Task<bool> UpdateUserByAdminAsync(UserStatusUpdateDTO userStatusUpdateDTO)
         {
-            var user = await _context.Users.FindAsync(userDto.UserId);
+            var user = await _context.Users.FindAsync(userStatusUpdateDTO.UserId);
             if (user == null) return false;
 
-            user.Name = userDto.Name;
-            user.Email = userDto.Email;
-            user.Address = userDto.Address;
-            user.Phone = userDto.Phone;
-            user.DOB = userDto.DOB;
-            user.Gender = userDto.Gender;
-            user.Status = userDto.Status;
-            user.IsActive = userDto.IsActive;
-            user.IsDeleted = userDto.IsDeleted;
+            user.Status = userStatusUpdateDTO.Status;
 
             _context.Entry(user).State = EntityState.Modified;
             return await _context.SaveChangesAsync() > 0;
@@ -118,6 +110,10 @@ namespace Project_B.Interface.Implement
 
         public async Task<bool> DeleteUserAsync(int userId)
         {
+
+            var roleLinks = _context.RoleUsers.Where(ru => ru.UserId == userId);
+            _context.RoleUsers.RemoveRange(roleLinks);
+
             var user = await _context.Users.FindAsync(userId);
             if (user == null) return false;
 
@@ -210,14 +206,12 @@ namespace Project_B.Interface.Implement
             userDto.Token = GenerateJwtToken(user);
             return userDto;
         }
-        // Google login
         public async Task<UserDTO> GoogleLoginAsync(string idToken)
         {
-            // 1. Validate Google token
             var payload = await GoogleJsonWebSignature.ValidateAsync(idToken);
 
-            // 2. Find or create user
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == payload.Email);
+
             if (user == null)
             {
                 user = new User
@@ -231,20 +225,29 @@ namespace Project_B.Interface.Implement
                 };
                 _context.Users.Add(user);
                 await _context.SaveChangesAsync();
+
                 var roleUser = new RoleUser
                 {
                     UserId = user.UserId,
-                    RoleId = 2 // 2 = normal user
+                    RoleId = 2 // normal user
                 };
                 _context.Set<RoleUser>().Add(roleUser);
                 await _context.SaveChangesAsync();
             }
+            else
+            {
+                if (!user.IsActive)
+                    throw new Exception("Tài khoản đã bị khóa.");
 
-            // 3. Generate JWT
+            }
+
+            user = await _context.Users.FirstOrDefaultAsync(u => u.Email == payload.Email);
+
             var userDto = new UserDTO(user);
             userDto.Token = GenerateJwtToken(user);
             return userDto;
         }
+
 
         private string GenerateJwtToken(User user)
         {
@@ -323,7 +326,7 @@ namespace Project_B.Interface.Implement
         {
             var fromAddress = new MailAddress("dtaminh0310@gmail.com", "Livio");
             var toAddress = new MailAddress(email);
-            const string fromPassword = "   ";
+            const string fromPassword = "";
             const string subject = "Email Verification";
             string body = $"Your activation code is: {otpCode}";
 

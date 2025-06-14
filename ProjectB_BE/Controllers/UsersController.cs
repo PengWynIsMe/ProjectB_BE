@@ -64,16 +64,19 @@ namespace Project_B.Controllers
 
 
         [HttpPut("{id}")]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> UpdateUserByAdmin(int id, [FromBody] UserDTO userDto)
+        //[Authorize(Roles = "Admin")]
+        public async Task<IActionResult> UpdateUserByAdmin(int id, [FromBody] UserStatusUpdateDTO userStatusUpdateDTO)
         {
-            if (id != userDto.UserId) return BadRequest();
+            if (id != userStatusUpdateDTO.UserId)
+                return BadRequest("User ID mismatch.");
 
-            var result = await _userRepository.UpdateUserByAdminAsync(userDto); /
-            if (!result) return NotFound();
+            var result = await _userRepository.UpdateUserByAdminAsync(userStatusUpdateDTO);
+            if (!result)
+                return NotFound();
 
             return NoContent();
         }
+
 
 
         [HttpDelete("{id}")]
@@ -134,14 +137,18 @@ namespace Project_B.Controllers
         }
 
         [HttpPost("google-login")]
-        public async Task<IActionResult> GoogleLogin([FromBody] string idToken)
+        public async Task<IActionResult> GoogleLogin([FromBody] GoogleLoginDTO dto)
         {
-            var userDto = await _userRepository.GoogleLoginAsync(idToken);
+            if (string.IsNullOrEmpty(dto.Credential))
+                return BadRequest("Missing Google credential.");
+
+            var userDto = await _userRepository.GoogleLoginAsync(dto.Credential);
             if (userDto == null)
                 return Unauthorized("Google login failed.");
 
             return Ok(userDto);
         }
+
 
 
         [HttpPost("ResetPassword")]

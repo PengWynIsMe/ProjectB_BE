@@ -84,10 +84,11 @@ namespace Project_B.Controllers
         }
 
         //List Manager
-        [HttpGet("{roleId}/Users")]
+        [HttpGet("{roleId:int}/Users")]
         public async Task<IActionResult> GetUsersByRole(int roleId)
         {
             var users = await _roleService.GetUsersByRoleAsync(roleId);
+
             return Ok(users.Select(u => new {
                 u.UserId,
                 u.Name,
@@ -95,23 +96,29 @@ namespace Project_B.Controllers
             }));
         }
 
-        [HttpPost("{roleId}/AssignUser")]
-        public async Task<IActionResult> AssignUserToRole(int roleId, int userId)
+        [HttpPost("{roleId:int}/Users")]
+        public async Task<IActionResult> AssignUserToRole(
+            int roleId,
+            [FromBody] RoleAssignDto dto)
         {
-            var result = await _roleService.AssignUserToRoleAsync(roleId, userId);
-            if (!result) return BadRequest("User already has this role.");
-            return Ok("User assigned successfully.");
+            if (dto == null) return BadRequest("UserId is required.");
+
+            var ok = await _roleService.AssignUserToRoleAsync(roleId, dto.UserId);
+            return ok ? Ok("User assigned successfully.")
+                      : BadRequest("User already has this role.");
         }
 
-        [HttpDelete("{roleId}/RemoveUser/{userId}")]
+
+        [HttpDelete("{roleId:int}/Users/{userId:int}")]
         public async Task<IActionResult> RemoveUserFromRole(int roleId, int userId)
         {
-            var result = await _roleService.RemoveUserFromRoleAsync(roleId, userId);
-            if (!result) return NotFound("User-role relation not found.");
-            return Ok("User removed from role.");
+            var ok = await _roleService.RemoveUserFromRoleAsync(roleId, userId);
+            return ok ? Ok("User removed from role.")
+                      : NotFound("User-role relation not found.");
         }
 
-        [HttpGet("{roleId}/UnassignedUsers")]
+
+        [HttpGet("{roleId:int}/UnassignedUsers")]
         public async Task<IActionResult> GetUnassignedUsers(int roleId)
         {
             var users = await _roleService.GetUnassignedUsersAsync(roleId);

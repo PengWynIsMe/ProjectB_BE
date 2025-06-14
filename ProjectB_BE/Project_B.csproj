@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Assets\NewFolder\" />
     <Folder Include="Assets\UserMealPhotos\" />
     <Folder Include="Assets\UserMealPhotos\" />
     <Folder Include="Utilities\" />
