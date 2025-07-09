@@ -6,8 +6,9 @@
         public string MealName { get; set; }
         public string Address { get; set; }
         public TimeSpan? OpenTime { get; set; }
+        public TimeSpan? CloseTime { get; set; }
         public string Phone { get; set; }
-        public string Note { get; set; }
+        public string? Note { get; set; }
         public int UserId { get; set; }
         public string? Image { get; set; }
         public IFormFile? ImageFile { get; set; }

@@ -65,6 +65,7 @@ namespace Project_B.Controllers
                 MealName = request.MealName,
                 Address = request.Address,
                 OpenTime = request.OpenTime,
+                CloseTime = request.CloseTime,
                 Phone = request.Phone,
                 Note = request.Note,
                 UserId = request.UserId,
@@ -88,7 +89,7 @@ namespace Project_B.Controllers
 
             if (request.ImageFile != null && request.ImageFile.Length > 0)
             {
-                var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "Assets", "UserMealPhotos");
+                var folderPath = Path.Combine(Directory.GetCurrentDirectory(), "Assets", "MealPhotos");
                 if (!Directory.Exists(folderPath))
                     Directory.CreateDirectory(folderPath);
 
@@ -106,6 +107,7 @@ namespace Project_B.Controllers
             meal.MealName = request.MealName;
             meal.Address = request.Address;
             meal.OpenTime = request.OpenTime;
+            meal.CloseTime = request.CloseTime;
             meal.Phone = request.Phone;
             meal.Note = request.Note;
             meal.UserId = request.UserId;
@@ -144,6 +146,7 @@ namespace Project_B.Controllers
                 MealName = meal.MealName,
                 Address = meal.Address,
                 OpenTime = meal.OpenTime,
+                CloseTime = meal.CloseTime,
                 Phone = meal.Phone,
                 Note = meal.Note,
                 UserId = meal.UserId,

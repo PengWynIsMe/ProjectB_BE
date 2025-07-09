@@ -13,7 +13,7 @@ namespace Project_B.Interface
         Task<bool> RegisterUserAsync(EmailDTO registerDTO);
         Task<bool> VerifyEmailAsync(OTPCodeVerifyDTO verifyEmailDTO);
         Task<bool> ResendCodeAsync(EmailDTO resendCodeDTO);
-        Task<bool> SetPasswordAsync(AccountPasswordDTO setPasswordDTO);
+        Task<bool> SetPasswordAsync(AccountDTO setPasswordDTO);
         Task<UserDTO> LoginAsync(AccountDTO loginDTO);
         Task<bool> ResetPasswordAsync(EmailDTO resetPasswordDTO);
         Task<UserDTO> GoogleLoginAsync(string idToken);

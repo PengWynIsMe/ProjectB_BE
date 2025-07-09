@@ -413,19 +413,75 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/Location"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/Location"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/Location"
+                "required": [
+                  "LocationName"
+                ],
+                "type": "object",
+                "properties": {
+                  "LocationID": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "LocationName": {
+                    "type": "string"
+                  },
+                  "Address": {
+                    "type": "string"
+                  },
+                  "OpenTime": {
+                    "type": "string",
+                    "format": "date-span"
+                  },
+                  "CloseTime": {
+                    "type": "string",
+                    "format": "date-span"
+                  },
+                  "Phone": {
+                    "type": "string"
+                  },
+                  "Note": {
+                    "type": "string"
+                  },
+                  "UserId": {
+                    "type": "integer",
+                    "format": "int32"
+                  },
+                  "ImageFile": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "LocationID": {
+                  "style": "form"
+                },
+                "LocationName": {
+                  "style": "form"
+                },
+                "Address": {
+                  "style": "form"
+                },
+                "OpenTime": {
+                  "style": "form"
+                },
+                "CloseTime": {
+                  "style": "form"
+                },
+                "Phone": {
+                  "style": "form"
+                },
+                "Note": {
+                  "style": "form"
+                },
+                "UserId": {
+                  "style": "form"
+                },
+                "ImageFile": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -599,6 +655,10 @@
                     "type": "string",
                     "format": "date-span"
                   },
+                  "CloseTime": {
+                    "type": "string",
+                    "format": "date-span"
+                  },
                   "Phone": {
                     "type": "string"
                   },
@@ -629,6 +689,9 @@
                   "style": "form"
                 },
                 "OpenTime": {
+                  "style": "form"
+                },
+                "CloseTime": {
                   "style": "form"
                 },
                 "Phone": {
@@ -731,6 +794,10 @@
                     "type": "string",
                     "format": "date-span"
                   },
+                  "CloseTime": {
+                    "type": "string",
+                    "format": "date-span"
+                  },
                   "Phone": {
                     "type": "string"
                   },
@@ -761,6 +828,9 @@
                   "style": "form"
                 },
                 "OpenTime": {
+                  "style": "form"
+                },
+                "CloseTime": {
                   "style": "form"
                 },
                 "Phone": {
@@ -1048,9 +1118,7 @@
             "description": "OK"
           }
         }
-      }
-    },
-    "/api/Role/{roleId}/AssignUser": {
+      },
       "post": {
         "tags": [
           "Role"
@@ -1064,16 +1132,27 @@
               "type": "integer",
               "format": "int32"
             }
-          },
-          {
-            "name": "userId",
-            "in": "query",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleAssignDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleAssignDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RoleAssignDto"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -1081,7 +1160,7 @@
         }
       }
     },
-    "/api/Role/{roleId}/RemoveUser/{userId}": {
+    "/api/Role/{roleId}/Users/{userId}": {
       "delete": {
         "tags": [
           "Role"
@@ -1997,6 +2076,11 @@
             "format": "date-span",
             "nullable": true
           },
+          "closeTime": {
+            "type": "string",
+            "format": "date-span",
+            "nullable": true
+          },
           "phone": {
             "type": "string",
             "nullable": true
@@ -2060,6 +2144,19 @@
               "$ref": "#/components/schemas/RoleUser"
             },
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RoleAssignDto": {
+        "required": [
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

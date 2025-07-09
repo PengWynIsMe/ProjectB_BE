@@ -1,0 +1,14 @@
+using System.ComponentModel.DataAnnotations;
+
+public class LocationDTO
+{
+    public int? LocationID { get; set; }
+    public required string LocationName { get; set; }
+    public string? Address { get; set; }
+    public TimeSpan? OpenTime { get; set; }
+    public TimeSpan? CloseTime { get; set; }
+    public string? Phone { get; set; }
+    public string? Note { get; set; }
+    public int UserId { get; set; }
+    public IFormFile? ImageFile { get; set; }
+}

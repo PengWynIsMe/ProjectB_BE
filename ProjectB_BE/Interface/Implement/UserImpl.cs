@@ -264,9 +264,11 @@ namespace Project_B.Interface.Implement
             var claims = new List<Claim>
                 {
                 new Claim(JwtRegisteredClaimNames.Sub, user.Email),
+                new Claim("name", user.Name),
                 new Claim("UserId", user.UserId.ToString()),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(ClaimTypes.Role, role)
+                new Claim(ClaimTypes.Role, role),
+                new Claim("Avatar", user.Avatar ?? "")
                 };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey));

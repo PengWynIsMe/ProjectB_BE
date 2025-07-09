@@ -1,4 +1,5 @@
-﻿using Project_B.Models;
+﻿using Project_B.DTOs;
+using Project_B.Models;
 
 namespace Project_B.Interface
 {

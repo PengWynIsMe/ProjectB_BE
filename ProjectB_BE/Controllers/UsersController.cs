@@ -119,7 +119,7 @@ namespace Project_B.Controllers
 
         // set password
         [HttpPost("SetPassword")]
-        public async Task<IActionResult> SetPassword([FromBody] AccountPasswordDTO setPasswordDTO)
+        public async Task<IActionResult> SetPassword([FromBody] AccountDTO setPasswordDTO)
         {
             var result = await _userRepository.SetPasswordAsync(setPasswordDTO);
             if (!result) return BadRequest("Failed to set password.");
